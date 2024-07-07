@@ -46,6 +46,10 @@ tr:nth-child(even) {
     margin: 5px 0;
 }
 
+.profile_img{
+    width:200px;
+}
+
 .images {
     display: flex;
     flex-direction: row;
