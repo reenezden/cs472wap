@@ -37,8 +37,6 @@ tr:nth-child(even) {
     background-color: #f9f9f9;
 }
 
-
-
 .movies-list {
     list-style-type: none;
     padding: 0;
@@ -58,3 +56,21 @@ tr:nth-child(even) {
     text-align: center;
 }
 
+/* Hyperlinks */
+a {
+    text-decoration: none; 
+    color: #007bff; 
+}
+
+a:hover {
+    text-decoration: underline; 
+}
+
+/* Drop-cap for paragraphs */
+p::first-letter {
+    font-size: 1.5em; 
+    float: left; 
+    margin: 0.05em 0.1em 0.05em 0; 
+    font-weight: bold;
+    line-height: 1;
+}
