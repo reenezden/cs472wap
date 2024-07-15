@@ -1,0 +1,27 @@
+body {
+    height: 100vh;
+  }
+  
+  footer {
+    height: 15%;
+  }
+  
+  .grey {
+    background: #c95c5c;
+  }
+  
+  .bg-darkgray {
+    background: #434242;
+  }
+  
+  .column-1 {
+    background: #e4cccc;
+  }
+  
+  .column-2 {
+    background: #e4cccc;
+  }
+  
+  .column-3 {
+    background:  #e4cccc;
+  }

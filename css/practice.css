@@ -1,0 +1,14 @@
+#outer {
+  padding: 10px;
+}
+.box {
+  width: 100px;
+  height: 100px;
+  margin: 10px;
+  float: right;
+  background-color: black;
+}
+
+.break {
+  clear: left;
+}

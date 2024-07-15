@@ -1,0 +1,41 @@
+body, html {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 100%;
+}
+
+.header {
+    background-color: #a3d2f2;
+    text-align: center;
+    padding: 10px;
+}
+
+.menu, .column {
+    float: left;
+    width: 33.33%;
+    background-color: #1c3d5a;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+
+.column {
+    background-color: #d3d3d3;
+}
+
+.footer {
+    clear: both;
+    background-color: #1c3d5a;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+
+@media (max-width: 600px) {
+    .menu, .column {
+        width: 100%;
+    }
+}
