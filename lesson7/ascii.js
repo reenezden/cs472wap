@@ -61,3 +61,31 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     }
 });
+
+// Function to sum all numbers in an array
+function sum(numbers) {
+    return numbers.reduce((acc, curr) => acc + curr, 0);
+}
+
+// Function to multiply all numbers in an array
+function multiply(numbers) {
+    return numbers.reduce((acc, curr) => acc * curr, 1);
+}
+
+// Function to reverse a string
+function reverse(str) {
+    return str.split('').reduce((reversed, char) => char + reversed, '');
+}
+
+// Function to filter words longer than a given length
+function filterLongWords(words, i) {
+    return words.filter(word => word.length > i);
+}
+
+// Example usage and logging the output to console
+document.addEventListener("DOMContentLoaded", () => {
+    console.log("Sum of [1, 2, 3, 4]:", sum([1, 2, 3, 4])); // Output: 10
+    console.log("Multiply [1, 2, 3, 4]:", multiply([1, 2, 3, 4])); // Output: 24
+    console.log("Reverse of 'hello':", reverse("hello")); // Output: "olleh"
+    console.log("Words longer than 5:", filterLongWords(["apple", "banana", "cherry", "date"], 5)); // Output: ["banana", "cherry"]
+});
