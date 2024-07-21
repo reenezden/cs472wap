@@ -11,14 +11,14 @@ Array.prototype.bubbleSort = function() {
     for (let i = 0; i < len; i++) {
         for (let j = 0; j < len - 1 - i; j++) {
             if (this[j] > this[j + 1]) {
-                [this[j], this[j + 1]] = [this[j + 1], this[j]]; // Swap elements
+                [this[j], this[j + 1]] = [this[j + 1], this[j]];
             }
         }
     }
     return this;
 };
 // Example Usage
-console.log([6, 4, 0, 3, -2, 1].bubbleSort()); // Output: [-2, 0, 1, 3, 4, 6]
+console.log([6, 4, 0, 3, -2, 1].bubbleSort());
 
 // Exercise 3: Teacher Object using Function Constructor
 function Person(name) {
@@ -29,7 +29,7 @@ Person.prototype.teach = function(subject) {
 };
 // Creating a Teacher object
 let teacher = new Person('John');
-teacher.teach('Mathematics'); // Output: John is now teaching Mathematics
+teacher.teach('Mathematics');
 
 // Using Object.create
 const teacherPrototype = {
@@ -43,7 +43,7 @@ function createTeacher(name) {
     return teacher;
 }
 let anotherTeacher = createTeacher('Jane');
-anotherTeacher.teach('Physics'); // Output: Jane is now teaching Physics
+anotherTeacher.teach('Physics');
 
 // Exercise 4: Using Prototype Approach
 const PersonProto = {
