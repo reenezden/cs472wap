@@ -1,12 +1,14 @@
 $(document).ready(function() {
     let gameLost = false;
     let isGameStarted = false;
+    let countdownInterval;
 
     // Store the initial position of the start element
     const startPos = $('#start').position();
 
     // Function to reset the maze
     function resetMaze() {
+        clearInterval(countdownInterval);
         $('.boundary').removeClass('youlose');
         $('#status').text('Click the "S" to begin.').css('color', 'black');
         gameLost = false;
@@ -18,15 +20,28 @@ $(document).ready(function() {
         $(document).off('mousemove');
     }
 
+    // Function to handle countdown
+    function startCountdown(seconds) {
+        let remaining = seconds;
+        $('#status').text(`Sorry, you hit the boundary, resetting in ${remaining} seconds`).css('color', 'red');
+
+        countdownInterval = setInterval(function() {
+            remaining--;
+            $('#status').text(`Sorry, you hit the boundary, resetting in ${remaining} seconds`).css('color', 'red');
+
+            if (remaining <= 0) {
+                clearInterval(countdownInterval);
+                resetMaze();
+            }
+        }, 1000);
+    }
+
     // Handle mouseover on any boundary
     $('.boundary').mouseover(function() {
         if (isGameStarted) {
             $('.boundary').addClass('youlose');
-            $('#status').text('Sorry, you hit the boundary, resetting in 3 seconds').css('color', 'red');
             gameLost = true;
-
-            // Delay the reset by 3 seconds
-            setTimeout(resetMaze, 3000);
+            startCountdown(3);
         }
     });
 
