@@ -19,7 +19,7 @@
                 <div>
                     <label>Task</label>
                     <input type="text" required="required" name="task" class="large"
-                        placeholder="Breakfast at Tiffanys" />
+                        placeholder="e.g Breakfast at Tiffanys" />
                 </div>
                 <div>
                     <label>Required by</label>
@@ -104,13 +104,18 @@
         });
 
         $('tbody').on('click', 'tr', function (evt) {
-            $(evt.target).closest('td').siblings().andSelf().toggleClass('rowHighlight');
+            $(evt.target).closest('td').siblings().andSelf().toggleClass('taskCompleted');
         });
 
         $('#tblTasks tbody').on('click', '.deleteRow', function (evt) {
             evt.preventDefault();
             $(evt.target).parents('tr').remove();
             updateTaskCount();
+        });
+
+        $('#tblTasks tbody').on('click', '.completeRow', function (evt) {
+            evt.preventDefault();
+            $(evt.target).closest('td').siblings().andSelf().toggleClass('taskCompleted');
         });
 
         $('#saveTask').click(function (evt) {
@@ -162,7 +167,7 @@
 <td>
 <nav>
 <a href="#">Edit</a>
-<a href="#">Complete</a>
+<a href="#" class"completeRow">Complete</a>
 <a href="#" class="deleteRow">Delete</a>
 </nav>
 </td>
