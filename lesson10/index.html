@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Growing Circles</title>
+    <title>Growing Shapes</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -20,12 +20,22 @@
         <input type="number" id="grow-rate" value="250">
     </div>
     <div>
-        <label for="number-circles">Number of Circles:</label>
+        <label for="number-circles">Number of Shapes:</label>
         <input type="number" id="number-circles" value="1">
     </div>
     <div>
-        <label for="color">Circle Color:</label>
+        <label for="color">Shape Color:</label>
         <input type="color" id="color" value="#ff6f61">
+    </div>
+    <div>
+        <label for="shape">Shape:</label>
+        <select id="shape">
+            <option value="circle">Circle</option>
+            <option value="square">Square</option>
+            <option value="rectangle">Rectangle</option>
+            <option value="pentagon">Pentagon</option>
+            <option value="octagon">Octagon</option>
+        </select>
     </div>
     <button id="start">Start</button>
 

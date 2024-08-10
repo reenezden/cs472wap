@@ -16,10 +16,28 @@ body {
     margin-top: 20px;
 }
 
-.circle {
+.shape {
     position: absolute;
-    border-radius: 50%;
-    background-color: #ff6f61;
     cursor: pointer;
     transition: width 250ms ease-in-out, height 250ms ease-in-out;
+}
+
+.circle {
+    border-radius: 50%;
+}
+
+.square {
+    /* No special styling needed, already a square */
+}
+
+.rectangle {
+    /* No special styling needed, default shape */
+}
+
+.pentagon {
+    clip-path: polygon(50% 0%, 100% 38%, 82% 100%, 18% 100%, 0% 38%);
+}
+
+.octagon {
+    clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%);
 }
